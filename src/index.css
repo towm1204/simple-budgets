@@ -1,13 +1,294 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.Picrow {
+  display: flex;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.Piccolumn {
+  flex: 50%;
+  padding: 5px;
+}
+footer {
+ size: "5";
+ margin-left: 1rem;
+ bottom:0px;
+}
+
+#about {
+  margin-left: 1rem;
+}
+
+#about img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 250px;
+  height: 250px;
+}
+
+#about h2 {
+  color: #2d5986;
+  margin-top: 1.5em;
+}
+
+
+#about nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2d5986;
+    padding: .75rem;
+  }
+
+
+#about a.app {
+    color: rgb(0, 0, 153);
+    text-decoration: none;
+    padding: .2rem;
+  }
+
+  #about li {
+  margin-right: 7em;
+  font-size: 90%;
+  }
+  #about a:hover {
+    color: #b7a57a;
+  }
+
+
+.main-container {
+  display: flex;
+  height: 100%;
+}
+
+.main-item {
+  padding-top: 3em;
+}
+
+.main-item:nth-child(1) {
+  flex-grow: 1;
+}
+
+.main-item:nth-child(2) {
+  display: none;
+}
+
+
+#settingsButton{
+  font-size: 0.7rem;
+  display: inline-block;
+  float: right;
+}
+
+#budget,#expense {
+  flex-grow: 1;
+}
+
+header {
+  background-color: #2d5986;
+  font-size: 1rem;
+}
+
+h1 {
+  display:none;
+}
+
+
+
+thead {
+  background-color: #2d5986;
+}
+
+thead th {
+  color: white;
+}
+
+#settingsButton2 {
+  display: none;
+  margin-right: 0.1rem;
+}
+
+#buttonContainer {
+  position: fixed;
+  bottom: 50px;
+  text-align: center;
+}
+
+#book {
+  text-align: center;
+}
+
+.transacButton {
+  background-color: #2d5986;
+  font-size: 1rem;
+  color: white;
+}
+
+#newTransacIn {
+  width: 70%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+}
+
+#newTransacOut {
+  width: 70%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+
+}
+
+#transacHist {
+  width: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+}
+
+#newTransacIn:hover {
+  background-image:none;
+  background-color:#99ff33;
+}
+
+#newTransacOut:hover {
+  background-image:none;
+  background-color: #ffa64d;
+}
+
+.budgetTitle, .expenseTitle {
+  font-size: 1rem;
+  padding: 0.7rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow-x: scroll;
+}
+
+#settingsModal {
+  display:block;
+  overflow-y: scroll;
+}
+
+.expenseBalance {
+  float: right;
+  margin-right: auto;
+}
+
+.budgetBalance {
+  float: right;
+  margin-right: auto;
+}
+
+.progressBar {
+  margin-bottom: 1.3rem;
+  width: 100%;
+  background-color: lightgrey;
+}
+
+#accountBalanceCollapse {
+  padding: 1rem;
+}
+
+#hamburger {
+  font-size: 1.25rem;
+}
+
+#accountsContainer {
+  overflow: auto;
+  white-space: nowrap;
+  font-size: 0.7rem;
+}
+
+.account {
+  display: inline-block;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.stats {
+  display: inline-block;
+  font-size: 1rem;
+  margin: 1rem;
+}
+
+#sideBar h5 {
+  margin-left:1rem;
+  margin-top:3rem;
+  margin-right:1rem
+}
+
+#sideBar hr {
+  margin-left:1rem;
+  margin-right:1rem
+}
+
+
+#budget .progress {
+  height: 1.5rem;
+  background-color: #99ff33;
+}
+
+#expense .progress {
+  height: 1.5rem;
+  background-color: #ffa64d;
+}
+
+
+#budget .card-title,#expense .card-title {
+  display: none;
+}
+
+#accountBalanceTitle {
+  display: inline-block;
+}
+
+@media (min-width: 425px) {
+  h1 {
+    font-size: 1.5rem !important;
+    color: white;
+    display:inline-block;
+    margin-left: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  #budget .card-title,#expense .card-title {
+    display: block;
+  }
+
+  #accountsContainer {
+    overflow: auto;
+    white-space: nowrap;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-item:nth-child(2) {
+    background-color: #eee;
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  #settingsButton2 {
+    display: inline-block;
+  }
+
+  .main-item:nth-child(1) {
+    padding-right: 15rem;
+  }
+
+  #hamburger {
+    display: none;
+  }
+
+  .accountTab {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    overflow: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 1200px) {
+  #buttonContainer {
+    text-align:center;
+  }
 }

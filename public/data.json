@@ -1,0 +1,83 @@
+{
+  "budgets":
+  {
+    "groceries":
+    {
+      "name": "Groceries",
+      "balance": 10.00,
+      "total": 150.00
+    },
+    "entertainment":
+    {
+      "name": "Entertainment",
+      "balance": 25.00,
+      "total": 200.00
+    }
+  },
+  "expenses":
+  {
+    "tuition":
+    {
+      "name": "Tution",
+      "balance": 10000.00,
+      "total": 10000.00
+    },
+    "rent":
+    {
+      "name": "Rent",
+      "balance": 2000.00,
+      "total": 5000.00
+    }
+  },
+  "accounts":
+  {
+    "checkings":
+    {
+      "name": "Checkings",
+      "balance":1000.00
+    },
+    "savings":
+    {
+      "name": "Savings",
+      "balance": 8000.00
+    },
+    "venmo":
+    {
+      "name": "Venmo",
+      "balance": 50.00
+    }
+  },
+  "stats":
+  {
+    "accounttotal":
+    {
+      "name":"Total Balance",
+      "data": 9050.00
+    },
+    "budgetspent":
+    {
+      "name":"Budget Spent",
+      "data": 35.00
+    },
+    "remainingbudget":
+    {
+      "name":"Remaining Budget",
+      "data": 315.00
+    },
+    "remainingexpense":
+    {
+      "name":"Remaining Expense",
+      "data": 3000.00
+    },
+    "pendingincome":
+    {
+      "name":"Pending Income",
+      "data": 1000.00
+    },
+    "netsavings":
+    {
+      "name":"Net Savings",
+      "data": 6735.00
+    }
+  }
+}

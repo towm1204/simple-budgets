@@ -1,17 +1,27 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import App from './components/App';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/database';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+import { BrowserRouter } from 'react-router-dom';
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAasGvJ7Oj-tpuxeGqORg7kWZEYqtkD2RI",
+  authDomain: "simple-budget-711ba.firebaseapp.com",
+  databaseURL: "https://simple-budget-711ba.firebaseio.com",
+  projectId: "simple-budget-711ba",
+  storageBucket: "simple-budget-711ba.appspot.com",
+  messagingSenderId: "599792837193",
+  appId: "1:599792837193:web:52bc783427d8f927d75598",
+  measurementId: "G-K9Q7S5RDBD"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, document.getElementById('root'));

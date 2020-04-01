@@ -1,7 +1,4 @@
 import React, {Component} from 'react';
-import DescriptionInput from './inputs/DescriptionInput';
-import TransacAmount from './inputs/TransacAmount';
-import IsIncome from './inputs/IsIncome';
 
 
 export default class TransacInModal extends Component {
@@ -34,6 +31,11 @@ export default class TransacInModal extends Component {
     this.setState({amount:newValue});
   }
 
+  handleIncomeChange = (event) => {
+    let newValue = event.target.checked;
+    this.setState({isIncome:newValue});
+  }
+
   handleSubmit = (event) => {
     this.props.callback(this.state);
     this.setState({
@@ -55,6 +57,7 @@ export default class TransacInModal extends Component {
     for (let acc in this.props.accounts) {
       accounts.push(<option key={acc} value={acc}>{this.props.accounts[acc].name}</option>);
     }
+    console.log(this.state)
 
     return (
       <div className="modal fade" id="transacInModal" tabIndex="-1" role="dialog">
@@ -86,7 +89,14 @@ export default class TransacInModal extends Component {
                   </div>
                   <input value={this.state.amount} onChange={this.handleAmountChange} type="text"  placeholder="0.00" className="form-control" aria-label= "Insert amount" htmlFor="EnterAmount" required></input>
                 </div>
-                <IsIncome handleInput={this.handleInput} />
+                <div className="input-group" id="isIncome">
+                  <div className="input-group-prepend">
+                    <span className="input-group-text">Income?</span>
+                    <div className="input-group-text">
+                      <input value={this.state.value} onChange={this.handleIncomeChange} type="checkbox" aria-label= "IncomeCheck" htmlFor="EnterIncome"></input>
+                    </div>
+                  </div>
+                </div>
               </form>
             </div>
             <div className="modal-footer">

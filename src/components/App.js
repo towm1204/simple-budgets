@@ -101,13 +101,7 @@ export default class App extends Component {
 
 
     return (
-      <Switch>
-        <Route exact path='/' render={(routerProps) => {
-          return (<DashBoard s={this.state} toggleModal={this.toggleModal} />);
-        }} />
-        <Route exact path='/about' component={AboutPage} />
-      </Switch>
-    );
+      <DashBoard s={this.state} toggleModal={this.toggleModal} />);
   }
 
 }

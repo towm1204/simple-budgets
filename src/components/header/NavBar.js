@@ -12,11 +12,6 @@ export default class NavBar extends Component{
           <button onClick={this.props.toggleModal} aria-label= "setting button" id="settingsButton2" htmlFor="settingsButton2" className="navbar-toggler" type="button">
             <span className="fa fa-cog"></span>
           </button>
-          <Link to="/about">
-            <button aria-label= "About page button" id="aboutButton" htmlFor="aboutButton"className="navbar-toggler" type="button" data-toggle="" data-target="">
-              <span className="fa fa-question-circle"></span>
-            </button>
-          </Link>
         </div>
         <span>
           <button onClick={this.props.handleSignout} className="btn btn-warning">{"Log out: " + this.props.displayName}</button>

@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 export default class OutFor extends Component {
   constructor(props) {
     super(props);
-    this.state = {value:''}
+    this.state = {value:null}
   }
 
   handleChange = (event) => {

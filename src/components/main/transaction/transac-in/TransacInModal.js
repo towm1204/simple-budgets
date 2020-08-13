@@ -78,6 +78,7 @@ export default class TransacInModal extends Component {
                     {accounts}
                   </select>
                 </div>
+
                 <div className="input-group mb-3" id="transacOutDesc">
                   <div className="input-group-prepend">
                     <span className="input-group-text">Description</span>

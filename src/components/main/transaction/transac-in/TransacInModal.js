@@ -7,7 +7,7 @@ export default class TransacInModal extends Component {
     this.state = {
       account:"",
       description:"",
-      amount:0.00,
+      amount:"",
       isIncome:false,
     }
   }
@@ -32,6 +32,7 @@ export default class TransacInModal extends Component {
   }
 
   handleIncomeChange = (event) => {
+    console.log(this.state);
     let newValue = event.target.checked;
     this.setState({isIncome:newValue});
   }
@@ -41,8 +42,8 @@ export default class TransacInModal extends Component {
     this.setState({
       account:"",
       description:"",
-      amount:0.00,
-      isIncome:false,
+      amount:"",
+      isIncome:this.state.isIncome,
     });
   }
 

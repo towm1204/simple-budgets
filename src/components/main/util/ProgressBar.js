@@ -4,7 +4,7 @@ export default class ProgressBar extends Component{
   render() {
     let percent = Math.min((this.props.balance / this.props.total * 100), 100)
     let progressStyle = {
-      width: (this.props.balance / this.props.total * 100) + "%"
+      width: (percent) + "%"
     };
     if (percent >= 100) {
       progressStyle["background-color"] = "#ff0000"

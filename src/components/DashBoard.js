@@ -102,7 +102,6 @@ export default class DashBoard extends Component {
             <div className="card">
               <div className="card-body">
                 <h5 className="card-title" id="accountBalanceTitle" aria-label= "Account balance" htmlFor="accountBalanceTitle" >Account Balance</h5>
-                <button onClick={this.props.toggleModal} id="settingsButton" type="button" className="btn btn-secondary" aria-label="Settings button" htmlFor="settingsButton" >Settings</button>
                 <hr></hr>
                 <AccountBalanceList accounts={this.props.s.accounts} />
               </div>

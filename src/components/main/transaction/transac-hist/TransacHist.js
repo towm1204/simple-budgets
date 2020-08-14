@@ -4,8 +4,19 @@ import TransacHistItem from './TransacHistItem';
 class TransacListItem extends Component {
   render() {
     return(
+
       <li class="list-group-item">
-        {this.props.row.description + ":     "+ this.props.row.amount + "$"}
+        <div class="container">
+          <div class="row">
+
+          <div class="col">
+            {this.props.row.description}
+          </div>
+          <div class="col-4">
+            {this.props.row.amount + "$"}
+          </div>
+          </div>
+        </div>
       </li>);
   }
 }
